@@ -11,37 +11,29 @@
         <section class="d-flex justify-content-center m-5 p-2">
             <div class="w-50">
                 <img src="images/mac.png" class="w-50"style="margin-left: 35%;" alt="">
-
             </div>
             <div class="w-50 me-5 " id="right-section">
                 <h1 class="fs-3 w-75">Customize your Blue 24-inch iMac with Apple M1 chip.</h1> 
-                <p class="w-75">Apple M1 chip with 8-core CPU with 4 performance core and 4 efficiency cores. 7-core GPU and 16 core neural engine 8gb unifined memory 256gb ssd storage two thunderbolt/USB 4 ports Magic Mouse Magic-keyboard-US English</p>
- 
+                <p class="w-75">Apple M1 chip with 8-core CPU with 4 performance core and 4 efficiency cores. 7-core GPU and 16 core neural engine 8gb unifined memory 256gb ssd storage two thunderbolt/USB 4 ports Magic Mouse Magic-keyboard-US English</p> 
                 <h5 class="mt-4">memory</h5>
-                <button type="button" id="memory-8gb" class="btn btn-outline-secondary">8GB unified memory</button>
-                <button type="button" id="memory-16gb" class="btn btn-outline-secondary">16GB unified memory</button>
-                
+                <button onclick="totalmemorycost('memory-8gb')" type="button" id="memory-8gb" class="btn btn-outline-secondary" >8GB unified memory</button>
+                <button onclick="totalmemorycost('memory-16gb')" type="button" id="memory-16gb" class="btn btn-outline-secondary">16GB unified memory</button>               
                 <h5 class="mt-4">Storage</h5>
-                <button type="button" id="ssd256" class="btn btn-outline-secondary">256GB SSD storage</button>
-                <button type="button" id="ssd512" class="btn btn-outline-secondary">512GB SSD storage</button>
-                <button type="button" id="ssd1tb" class="btn btn-outline-secondary">1TB SSD storage</button>
+                <button onclick="totalstoragecost('ssd256')" type="button" id="ssd256" class="btn btn-outline-secondary">256GB SSD storage</button>
+                <button  onclick="totalstoragecost('ssd512')" type="button" id="ssd512" class="btn btn-outline-secondary">512GB SSD storage</button>
+                <button  onclick="totalstoragecost('ssd1tb')" type="button" id="ssd1tb" class="btn btn-outline-secondary">1TB SSD storage</button>
                 <h5 class="mt-4">Choose your delivery option<h5>
-                <button type="button" id="free" class="btn btn-outline-secondary">Friday, Aug 25 FREE Prime Delivery</button>
-                <button type="button" id="paid" class="btn btn-outline-secondary">Friday, Aug 21 Delivery charge $20</button>
-
+                <button onclick="totaldeliverycost('free')" type="button" id="free" class="btn btn-outline-secondary">Friday, Aug 25 FREE Prime Delivery</button>
+                <button onclick="totaldeliverycost('paid')" type="button" id="paid" class="btn btn-outline-secondary">Friday, Aug 21 Delivery charge $20</button>
                 <div class="cart-item my-5">
-                    <div class="row">
-  
+                    <div class="row"> 
                        <div class="col-md-5">
-                          <h5 class="fs-6">Best Price:</h5>
-                        
+                          <h5 class="fs-6">Best Price:</h5>                       
                           <h5 class="fs-6">Extra Memory Cost:</h5>
                           <h5 class="fs-6">Extra storage Cost:</h5>
                           <h5 class="fs-6">Delivery Charge:</h5>
-                          
                           <h5 class="fs-6">Total Price:</h5>
                        </div>
-  
                        <div class="col-md-7 status">
                           <h5 class="fs-6">$<span id="sub-total">1299</span></h5>
                           <h5 class="fs-6">$<span id="memory-cost">0</span></h5>
@@ -53,12 +45,9 @@
                  </div>
                  <section>
                     <h6 class="fs-5">Add Pomo code</h6>
-                    <input id="apply-cupon" type="text" placeholder="Please type pomo code">
+                    <input id="apply-cupon" type="text">
                     <button class="btn btn-danger rounded " type="submit">apply</button>
                 </section>
-
-
-
             </div>
         </section>
 
