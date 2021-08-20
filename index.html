@@ -18,16 +18,16 @@
                 <p class="w-75">Apple M1 chip with 8-core CPU with 4 performance core and 4 efficiency cores. 7-core GPU and 16 core neural engine 8gb unifined memory 256gb ssd storage two thunderbolt/USB 4 ports Magic Mouse Magic-keyboard-US English</p>
  
                 <h5>memory</h5>
-                <button type="button" class="btn btn-outline-secondary">8GB unified memory</button>
-                <button type="button" class="btn btn-outline-secondary">16GB unified memory</button>
+                <button type="button" id="memory-8gb" class="btn btn-outline-secondary">8GB unified memory</button>
+                <button type="button" id="memory-16gb" class="btn btn-outline-secondary">16GB unified memory</button>
                 
                 <h5>Storage</h5>
-                <button type="button" class="btn btn-outline-secondary">256GB SSD storage</button>
-                <button type="button" class="btn btn-outline-secondary">512GB SSD storage</button>
-                <button type="button" class="btn btn-outline-secondary">1TB SSD storage</button>
+                <button type="button" id="ssd256" class="btn btn-outline-secondary">256GB SSD storage</button>
+                <button type="button" id="ssd512" class="btn btn-outline-secondary">512GB SSD storage</button>
+                <button type="button" id="ssd1tb" class="btn btn-outline-secondary">1TB SSD storage</button>
                 <h5>Choose your delivery option<h5>
-                <button type="button" class="btn btn-outline-secondary">Friday, Aug 25 FREE Prime Delivery</button>
-                <button type="button" class="btn btn-outline-secondary">Friday, Aug 21 Delivery charge $20</button>
+                <button type="button" id="free" class="btn btn-outline-secondary">Friday, Aug 25 FREE Prime Delivery</button>
+                <button type="button" id="paid" class="btn btn-outline-secondary">Friday, Aug 21 Delivery charge $20</button>
 
                 <div class="cart-item">
                     <div class="row">
@@ -44,9 +44,9 @@
   
                        <div class="col-md-3 status">
                           <h5 class="fs-6">$<span id="sub-total">1299</span></h5>
-                          <h5 class="fs-6">$<span id="tax-amount">0</span></h5>
-                          <h5 class="fs-6">$<span id="total-price">0</span></h5>
-                          <h5 class="fs-6">$<span id="total-price">0</span></h5>
+                          <h5 class="fs-6">$<span id="memory-cost">0</span></h5>
+                          <h5 class="fs-6">$<span id="storage-cost">0</span></h5>
+                          <h5 class="fs-6">$<span id="delivery-cost">0</span></h5>
                           <h5 class="fs-6">$<span id="total-price">0</span></h5>
                        </div>
                     </div>
@@ -66,6 +66,7 @@
             <h1 class="text-center">Total: $ <span>1299</span></h1>
         </section>
     </main>
+    <script src="js/function.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
