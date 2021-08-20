@@ -1,7 +1,5 @@
-
 // memory section 
-document.getElementById('memory-8gb').addEventListener('click', function () {
- 
+document.getElementById('memory-8gb').addEventListener('click', function () { 
     var totalstoragecosttext = document.getElementById('storage-cost').innerText;
     var totalstoragecost = parseFloat(totalstoragecosttext);
     var  totalmemorycosttext = document.getElementById('memory-cost').innerText = 0;
@@ -82,7 +80,7 @@ document.getElementById('paid').addEventListener('click', function () {
 
 
 
-//calculate total
+//calculate total function
 function calculateTotale(totalmemorycost,totalstoragecost,totaldeliverycost) {
     const  bestprice = 1299;
     var total = document.getElementById('total-price');
@@ -91,16 +89,10 @@ function calculateTotale(totalmemorycost,totalstoragecost,totaldeliverycost) {
 }
 
 //calculate total after apply copon
-
-// var finaltotal = document.getElementById('final-total');
-// var x=finaltotal.innerText;
-// console.log(x);
 document.getElementById('right-section').addEventListener('click', function () {
     var previousprice = document.getElementById('total-price').innerText;
-    // console.log(previousprice);
     var cupon = document.getElementById('apply-cupon').value;
     var finaltotal = document.getElementById('final-total');
-    // console.log(cupon);
 
     if (cupon == 'stevekaku') {
         var discount = (previousprice*20)/100;
