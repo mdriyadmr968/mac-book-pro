@@ -1,21 +1,13 @@
-const  bestprice = 1299;
-// totalmemorycost = 0;
-// totalstoragecost = 0;
-// totaldeliverycost = 0;
-
 
 // memory section 
 document.getElementById('memory-8gb').addEventListener('click', function () {
  
     var totalstoragecosttext = document.getElementById('storage-cost').innerText;
     var totalstoragecost = parseFloat(totalstoragecosttext);
-    console.log(totalstoragecost);
-    var  totalmemorycosttext = document.getElementById('memory-cost').innerText = 300;
+    var  totalmemorycosttext = document.getElementById('memory-cost').innerText = 0;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    // console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
@@ -23,13 +15,10 @@ document.getElementById('memory-16gb').addEventListener('click', function () {
  
     var totalstoragecosttext = document.getElementById('storage-cost').innerText;
     var totalstoragecost = parseFloat(totalstoragecosttext);
-    console.log(totalstoragecost);
-    var  totalmemorycosttext = document.getElementById('memory-cost').innerText = 700;
+    var  totalmemorycosttext = document.getElementById('memory-cost').innerText = 180;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    // console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
@@ -37,40 +26,31 @@ document.getElementById('memory-16gb').addEventListener('click', function () {
 // // storage section 
 document.getElementById('ssd256').addEventListener('click', function () {
  
-    var totalstoragecost = document.getElementById('storage-cost').innerText = 300;
-    console.log(totalstoragecost);
+    var totalstoragecost = document.getElementById('storage-cost').innerText = 0;
     var  totalmemorycosttext = document.getElementById('memory-cost').innerText;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
 document.getElementById('ssd512').addEventListener('click', function () {
  
-    var totalstoragecost = document.getElementById('storage-cost').innerText = 500;
-    console.log(totalstoragecost);
+    var totalstoragecost = document.getElementById('storage-cost').innerText = 100;
     var  totalmemorycosttext = document.getElementById('memory-cost').innerText;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
 document.getElementById('ssd1tb').addEventListener('click', function () {
  
-    var totalstoragecost = document.getElementById('storage-cost').innerText = 1000;
-    console.log(totalstoragecost);
+    var totalstoragecost = document.getElementById('storage-cost').innerText = 180;
     var  totalmemorycosttext = document.getElementById('memory-cost').innerText;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
@@ -80,13 +60,10 @@ document.getElementById('free').addEventListener('click', function () {
  
     var totalstoragecosttext = document.getElementById('storage-cost').innerText;
     var totalstoragecost = parseFloat(totalstoragecosttext);
-    console.log(totalstoragecost);
     var  totalmemorycosttext = document.getElementById('memory-cost').innerText;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText=0;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    // console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
@@ -95,13 +72,10 @@ document.getElementById('paid').addEventListener('click', function () {
  
     var totalstoragecosttext = document.getElementById('storage-cost').innerText;
     var totalstoragecost = parseFloat(totalstoragecosttext);
-    console.log(totalstoragecost);
     var  totalmemorycosttext = document.getElementById('memory-cost').innerText;
     var totalmemorycost = parseFloat(totalmemorycosttext);
-    console.log(totalmemorycost);
     var totaldeliverycosttext = document.getElementById('delivery-cost').innerText=20;
     var totaldeliverycost = parseFloat(totaldeliverycosttext);
-    // console.log(totaldeliverycost);
     calculateTotale(totalmemorycost,totalstoragecost ,totaldeliverycost);
     
 })
@@ -110,47 +84,37 @@ document.getElementById('paid').addEventListener('click', function () {
 
 //calculate total
 function calculateTotale(totalmemorycost,totalstoragecost,totaldeliverycost) {
+    const  bestprice = 1299;
     var total = document.getElementById('total-price');
     var totalprice = (bestprice+totalmemorycost+totalstoragecost+totaldeliverycost);
     total.innerText = totalprice;
-    console.log(totalprice);
 }
 
+//calculate total after apply copon
 
-// //storage section
+// var finaltotal = document.getElementById('final-total');
+// var x=finaltotal.innerText;
+// console.log(x);
+document.getElementById('right-section').addEventListener('click', function () {
+    var previousprice = document.getElementById('total-price').innerText;
+    // console.log(previousprice);
+    var cupon = document.getElementById('apply-cupon').value;
+    var finaltotal = document.getElementById('final-total');
+    // console.log(cupon);
 
-// document.getElementById('ssd256').addEventListener('click', function () {
-//     var memorycost = document.getElementById('storage-cost');
-//     memorycost.innerText = 0;
-
-// })
-
-// document.getElementById('ssd512').addEventListener('click', function () {
-//     var memorycost = document.getElementById('storage-cost');
-//     memorycost.innerText = 100;
-
-// })
-
-// document.getElementById('ssd1tb').addEventListener('click', function () {
-//     var memorycost = document.getElementById('storage-cost');
-//     memorycost.innerText = 180;
-
-// })
-
-// // delivery section 
-// document.getElementById('free').addEventListener('click', function () {
-//     var memorycost = document.getElementById('delivery-cost');
-//     memorycost.innerText = 0;
-
-// })
-// document.getElementById('paid').addEventListener('click', function () {
-//     var memorycost = document.getElementById('delivery-cost');
-//     memorycost.innerText = 20;
-
-// })
+    if (cupon == 'stevekaku') {
+        var discount = (previousprice*20)/100;
+        finaltotal.innerText = previousprice - discount;
+        
+    }
+    else{
+        finaltotal.innerText=previousprice;
+    }
+    
+})
 
 
-// total section 
+
 
 
 
