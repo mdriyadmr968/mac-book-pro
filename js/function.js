@@ -59,11 +59,12 @@ function calculateTotale(totalmemorycost,totalstoragecost,totaldeliverycost) {
     total.innerText = totalprice;
 }
 
-//total price after applying cupon
+// total price after applying cupon
 document.getElementById('right-section').addEventListener('click', function () {
     var previousprice = document.getElementById('total-price').innerText;
     var cupon = document.getElementById('apply-cupon').value;
     var finaltotal = document.getElementById('final-total');
+    var applyButton = document.getElementById('apply-btn');
 
     if (cupon == 'stevekaku') {
         var discount = (previousprice*20)/100;
@@ -74,11 +75,24 @@ document.getElementById('right-section').addEventListener('click', function () {
     }   
     else{
         finaltotal.innerText=previousprice;
-        document.getElementById('apply-cupon').value = '';
-        
+        document.getElementById('apply-cupon').value = '';       
     }  
 })
 
+// disable apply button 
+document.getElementById('right-section').addEventListener('keyup', function () {
+    var previousprice = document.getElementById('total-price').innerText;
+    var cupon = document.getElementById('apply-cupon').value;
+    var finaltotal = document.getElementById('final-total');
+    var applyButton = document.getElementById('apply-btn');
+
+    if (cupon == 'stevekaku') {
+        applyButton.removeAttribute('disabled');        
+    }   
+    else{
+        applyButton.setAttribute('disabled', true);        
+    }  
+})
 
 
 
